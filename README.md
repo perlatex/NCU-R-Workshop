@@ -4,7 +4,7 @@ Repository for the R Workshop at Innovation College of North-Chiang Mai Universi
 
 ## Schedule
 
-### 20230823
+### [20230823](https://github.com/perlatex/NCU-R-Workshop/tree/main/20230823)
 
 | 序号 | 姓名           | 题目                                         |
 |:----:|:---------------|:---------------------------------------------|
