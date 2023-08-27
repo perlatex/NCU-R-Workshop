@@ -1,0 +1,65 @@
+---
+title: "gtsummary生成表格"
+author: "姓名"
+date: "`r Sys.Date()`"
+output: 
+  officedown::rdocx_document:
+    number_sections: yes
+    df_print: kable
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+    echo     = FALSE,
+    warning  = FALSE, 
+    message  = FALSE,
+    fig.asp  = 0.618,
+    dpi      = 300
+)
+options(digits = 3)
+```
+
+
+我们的课程目标：用R语言生成一份完整的word分析报告，内容包括读取数据，画出图形以及建立模型。
+
+
+```{r, echo=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+penguins <- penguins %>% drop_na()
+```
+
+
+
+# 用ggplot2画
+```{r}
+penguins %>% 
+  ggplot(aes(x = species, y = bill_length_mm)) +
+  geom_jitter(
+    width = 0.25, 
+    fill = "#FF8C00", 
+    size = 5, 
+    shape = 21
+  ) 
+```
+
+
+
+
+# 用ggstatsplot画
+```{r}
+library(ggstatsplot)
+
+penguins %>% 
+  ggbetweenstats( 
+    x = species,
+    y = bill_length_mm,
+    pairwise.comparisons = TRUE,
+    pairwise.display = "all",
+    var.equal = TRUE
+  )
+```
+
+
+

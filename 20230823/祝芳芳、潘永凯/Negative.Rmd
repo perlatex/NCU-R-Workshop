@@ -1,0 +1,109 @@
+---
+title: "Negative body image"
+date: "`r Sys.Date()`"
+output: 
+  officedown::rdocx_document:
+    reference_docx: custom-reference-doc.docx
+    number_sections: yes
+    df_print: kable
+bibliography: references.bib
+csl: apa-5th-edition.csl
+link-citations: yes
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+    echo     = FALSE,
+    warning  = FALSE, 
+    message  = FALSE,
+    fig.asp  = 0.618,
+    dpi      = 600
+)
+options(digits = 3)
+```
+
+
+
+# Introduction
+
+Within modern western society, many people, in particular girls and women, have a negative body image 
+
+
+
+# Literature review
+
+The term 
+
+
+# Hypothesis development
+
+H1. 
+
+
+
+# Research methodology
+
+The data in Table \@ref(tab:tab01) indicate that 
+
+```{r, tab.id = "tab01", tab.cap = "all variables of the analysis"}
+source("./code/Table01.R")
+table01
+```
+
+
+
+```{r, tab.id = "tab02", tab.cap = "Simple mediation analysis"}
+source("./code/Table02.R")
+table02
+``` 
+
+
+
+
+```{r, tab.id = "tab03", tab.cap = "Moderated mediation analysis"}
+source("./code/Table03.R")
+table03
+``` 
+
+
+```{r, tab.id = "tab04", tab.cap = "variables of the analysis"}
+source("./code/Table04.R")
+table04
+``` 
+
+
+```{r, tab.id = "tab05", tab.cap = "Simple mediation analysis"}
+source("./code/Table05.R")
+table05
+``` 
+
+
+```{r, tab.id = "tab06", tab.cap = "Moderated mediation analysis"}
+source("./code/Table06.R")
+table06
+``` 
+
+
+
+```{r, tab.id = "tab07", tab.cap = "Stepwise regression analysis"}
+source("./code/Table07.R")
+table07
+``` 
+
+
+
+
+
+# Conclusions, contributions and implications
+
+This study takes two theoretical approaches
+
+
+
+
+
+
+
+\newpage
+# References {.unnumbered}
