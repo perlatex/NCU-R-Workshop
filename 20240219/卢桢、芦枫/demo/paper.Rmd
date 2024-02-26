@@ -1,0 +1,21 @@
+---
+title: "Young people's perceived service quality"
+author: "Wen Jun."
+date: "`r Sys.Date()`"
+output: 
+  officedown::rdocx_document:
+    reference_docx: "./help/custom-reference-doc.docx"
+    number_sections: yes
+    df_print: kable
+bibliography: "./help/references.bib"
+csl: "./help/apa-7th-edition.csl"
+link-citations: yes
+linkcolor: red
+urlcolor: red
+---
+
+# Introduction
+
+These statistics show that businesses need digital technologies and instant innovation performance to contribute to digital economy. Innovation performance has become critical success factor for almost every organization of current digital era[@XuHonggang2016]. The current debate on innovation performance shows that innovation performance is concerned with both individual and organizational level factors. But all these studies have been conducted to explore factors affecting innovation performance other than digital economy[@Wickham2017]
+
+# References {.unnumbered}

@@ -1,0 +1,108 @@
+---
+title: "从数据到论文"
+author: "姓名"
+date: "`r Sys.Date()`"
+output: 
+  officedown::rdocx_document:
+    number_sections: yes
+    df_print: kable
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo         = FALSE,
+  warning      = FALSE,
+  message      = FALSE,
+  fig.width    = 5,
+  fig.asp      = 0.618,
+  dpi          = 600
+)
+options(digits = 3)
+```
+
+
+这是一篇高分论文，尝试复现文章 Table 1.
+
+# 常规方法
+```{r}
+library(tidyverse)
+
+data <- readxl::read_excel("cleandata.xlsx") %>%
+  drop_na()
+
+d1 <- data %>%
+  mutate(
+    gender = factor(gender,
+      levels = c(0, 1),
+      labels = c("male", "female")
+    ),
+    bususefrequency = factor(bususefrequency,
+      levels = c(1, 2, 3, 4),
+      labels = c(
+        "Less than 5 times",
+        "About 6–10 times",
+        "About 11–15 times",
+        "More than 15 times"
+      )
+    )
+  )
+
+
+tab01a <- d1 %>%
+  count(gender) %>%
+  mutate(
+    Percentage = scales::label_percent(accuracy = 0.01)(n / sum(n))
+  ) %>%
+  mutate(Variable = "gender", .before = 1L) %>%
+  rename(Frequency_Statistics = n, Categories = gender)
+
+
+tab01b <- d1 %>%
+  summarise(
+    Mean               = mean(age),
+    Standard_deviation = sd(age),
+    Maximum            = max(age),
+    Minimum            = min(age)
+  ) %>%
+  pivot_longer(
+    cols      = everything(),
+    names_to  = "Categories",
+    values_to = "Frequency_Statistics"
+  ) %>%
+  mutate(Variable = "Age", .before = 1L)
+
+
+tab01c <- d1 %>%
+  count(bususefrequency) %>%
+  mutate(
+    Percentage = scales::label_percent(accuracy = 0.01)(n / sum(n))
+  ) %>%
+  mutate(Variable = "Monthly use of HEB", .before = 1L) %>%
+  rename(Frequency_Statistics = n, Categories = bususefrequency)
+
+
+bind_rows(tab01a, tab01b, tab01c) %>%
+  flextable::as_grouped_data(groups = "Variable") %>%
+  flextable::flextable() %>%
+  flextable::colformat_double(digits = 3) %>%
+  flextable::align(j = ~Percentage, align = "center", part = "body") %>%
+  flextable::fontsize(size = 9, part = "all") %>% 
+  flextable::line_spacing(space = 0.7) %>% 
+  flextable::autofit()
+```
+
+
+
+# 福音
+```{r}
+library(gtsummary)
+d1 %>%
+  select(gender, age, bususefrequency) %>% 
+  gtsummary::tbl_summary() %>% 
+  gtsummary::as_flex_table()  %>%
+  flextable::fontsize(size = 9, part = "all") %>% 
+  flextable::line_spacing(space = 0.7) %>% 
+  flextable::autofit()
+```
+
