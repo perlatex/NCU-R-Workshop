@@ -1,0 +1,41 @@
+---
+title: "从数据到论文"
+author: "姓名"
+date: "`r Sys.Date()`"
+output: 
+  officedown::rdocx_document:
+    number_sections: yes
+    df_print: kable
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+    echo         = FALSE,
+    warning      = FALSE, 
+    message      = FALSE,
+    fig.width    = 5, 
+    fig.asp      = 0.618,
+    dpi          = 600
+)
+options(digits = 3)
+```
+
+
+
+
+  
+# 从这里开始
+
+- style: 领导风格
+- emp  : 领导授权
+- iden : 身份认同
+- perf : 员工工作绩效
+
+```{r}
+library(tidyverse)
+d <- haven::read_sav("./data/data.sav")  
+
+d %>% sjPlot::view_df()
+```
+  

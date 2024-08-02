@@ -1,0 +1,20 @@
+---
+title: "用结构方程模型探索变量间的关系"
+author: "NCU-R-Workshop"
+date: "2024-07-24"
+output: 
+  officedown::rdocx_document:
+    number_sections: yes
+    df_print: kable
+---
+
+
+
+
+```{r,echo=FALSE}
+f <- readxl::read_excel("group.xlsx")
+f |>
+  flextable::flextable()|>
+  flextable::width(j = 2, width = 4)|>
+  flextable::align(j = 1, align = "center", part = "all")
+```

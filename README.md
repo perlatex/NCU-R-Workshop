@@ -35,4 +35,14 @@ Repository for the R Workshop at Innovation College of North-Chiang Mai Universi
 |  11  	| 朱立地、王文娟 	| 《论文开题必备技能---Bibliometrix文献计量》                                      	|
 |  12  	|     王敏杰     	| 《从论文到数据》                                                                 	|
 
+### [20240724](https://github.com/perlatex/NCU-R-Workshop/tree/main/20240724)
+
+| 分组 	| 组员                                	|
+|:----:	|-------------------------------------	|
+|   1  	| 张云飞  朱立地  王文娟              	|
+|   2  	| 祝芳芳  唐玲芳 李晓青 潘永凯 杨锦霞 	|
+|   3  	| 张璐  代洪伟 刘凯东 戴震 赵梓君     	|
+|   4  	| 郇静  李瑾 王霞 罗玲 付英婷         	|
+|   5  	| 高亮  芦枫 卢祯 张银浩 罗雯玥       	|
+|   6  	| 赵哲  岳睿哲  郭梓妍  查志娟        	|
 
