@@ -4,7 +4,7 @@ Repository for the R Workshop at Innovation College of North-Chiang Mai Universi
 
 ## Schedule
 
-### [20230823](https://github.com/perlatex/NCU-R-Workshop/tree/main/20230823)
+### [20230823《R语言分享研讨会》](https://github.com/perlatex/NCU-R-Workshop/tree/main/20230823)
 
 | 序号 | 姓名           | 题目                                         |
 |:----:|:---------------|:---------------------------------------------|
@@ -18,7 +18,7 @@ Repository for the R Workshop at Innovation College of North-Chiang Mai Universi
 |   8  | 王敏杰         | 《结构方程模型中的二阶构念》                 |
 
 
-### [20240219](https://github.com/perlatex/NCU-R-Workshop/tree/main/20240219)
+### [20240219《结构方程模型及高分论文复现》](https://github.com/perlatex/NCU-R-Workshop/tree/main/20240219)
 
 | 序号 	|      姓名      	| 题目                                                                             	|
 |:----:	|:--------------:	|----------------------------------------------------------------------------------	|
@@ -35,7 +35,7 @@ Repository for the R Workshop at Innovation College of North-Chiang Mai Universi
 |  11  	| 朱立地、王文娟 	| 《论文开题必备技能---Bibliometrix文献计量》                                      	|
 |  12  	|     王敏杰     	| 《从论文到数据》                                                                 	|
 
-### [20240724](https://github.com/perlatex/NCU-R-Workshop/tree/main/20240724)
+### [20240724《用结构方程模型探索变量间的关系》](https://github.com/perlatex/NCU-R-Workshop/tree/main/20240724)
 
 | 分组 	| 组员                                	|
 |:----:	|-------------------------------------	|
@@ -47,7 +47,7 @@ Repository for the R Workshop at Innovation College of North-Chiang Mai Universi
 |   6  	| 赵哲  岳睿哲  郭梓妍  查志娟        	|
 
 
-### [20250204](https://github.com/perlatex/NCU-R-Workshop/tree/main/20250204)
+### [20250204《跟着Nature学分析》](https://github.com/perlatex/NCU-R-Workshop/tree/main/20250204)
 
 
 | No. | name                 | topic                                            | paper                                         | 期刊名          |
@@ -64,3 +64,4 @@ Repository for the R Workshop at Innovation College of North-Chiang Mai Universi
 | 10  | 谢丽芬               | 人工智能技术创新能否提升能源韧性？绿色金融的作用 | https://doi.org/10.1016/j.eneco.2024.108159   | Energy Econ.    |
 
 
+### [《不确定性与商业洞察》]（）
